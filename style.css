@@ -1,3 +1,65 @@
-* {
-  color: red;
+/** {
+  box-sizing: : border-box;
+  border: 1px solid red;
+}*/
+
+/*intro part of About Me*/
+#intro {
+  background-image: url("https://scontent.xx.fbcdn.net/v/t1.0-9/13102757_10156813564085431_5508557489975697775_n.jpg?oh=890641aa477b7c3744ea0c9cd3e2a4c8&oe=5A090DD3");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: auto;
+  height: 450px;
+  text-align: center;
+}
+
+#intro h1 {
+  font-size: 54px;
+  font-family: "Roboto", sans-serif;
+  margin: 40px 0 0 0;
+}
+
+#intro h2 {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight:200;
+  margin-top: 0;
+}
+
+/*welcome user to play game*/
+#left_box {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 70px;
+  text-align: right;
+  float: left;
+  height: 200px;
+  width: 50%;
+  margin: 2px 0;
+}
+
+#right_box {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  font-size: 24px;
+  color: grey;
+  text-align: left center;
+  float: right;
+  width: 48%;
+  height: 200px;
+  margin: 3px 0;
+}
+
+/*listes guess game questions and answers*/
+.questions {
+  float: left;
+  width: 19%;
+  height: 78px;
+  margin: 0 5px;
+  background-color: DarkGrey;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: white;
 }
