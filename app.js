@@ -3,9 +3,9 @@ var guestName = prompt("Hey, what's your name? Let's play a game!");
 alert("But I just read we can't use functions yet, so I will have to ask you all the questions here. \nYou should be able to see the answers once the page reload after all the prompts. \nOh dear.");
 var answer1 = prompt("Can pigs look at the sky?\nY or N?");
 answer1.toLowerCase();
-if (answer1 === "n" || "no") {
+if (answer1 === "n" || answer1 === "no") {
   alert("Correct!")
-} else if (answer1 === "y" || "yes") {
+} else if (answer1 === "y" || answer1 === "yes") {
   alert("Wrong.")
 } else {
   alert("You didn't type in Y or N.")
@@ -15,9 +15,9 @@ console.log("user answer1 is: " + answer1);
 var answer2 = prompt("Can horses sleep while standing up?\nY or N?");
 answer2.toLowerCase();
 console.log("user answer2 is: " + answer2);
-if (answer2 === "y" || "yes") {
+if (answer2 === "y" || answer2 === "yes") {
   alert("Correct!")
-} else if (answer2 === "n" || "no") {
+} else if (answer2 === "n" || answer2 === "no") {
   alert("Wrong.")
 } else {
   alert("You didn't type in Y or N.")
@@ -26,9 +26,9 @@ if (answer2 === "y" || "yes") {
 var answer3 = prompt("Do baby elephants suck their trunk?\nY or N?");
 answer3.toLowerCase();
 console.log("user answer3 is: " + answer3);
-if (answer3 === "y" || "yes") {
+if (answer3 == "y" || answer3 === "yes") {
   alert("Correct!")
-} else if (answer3 === "n" || "no") {
+} else if (answer3 == "n" || answer3 === "no") {
   alert("Wrong.")
 } else {
   alert("You didn't type in Y or N.")
@@ -37,9 +37,9 @@ if (answer3 === "y" || "yes") {
 var answer4 = prompt("Do prairie dogs kiss?\nY or N?");
 answer4.toLowerCase();
 console.log("user answer4 is: " + answer4);
-if (answer4 === "y" || "yes") {
+if (answer4 == "y" || answer4 === "yes") {
   alert("Correct!")
-} else if (answer4 === "n" || "no") {
+} else if (answer4 === "n" || answer4 === "no") {
   alert("Wrong.")
 } else {
   alert("You didn't type in Y or N.")
@@ -48,9 +48,9 @@ if (answer4 === "y" || "yes") {
 var answer5 = prompt("Finally, can cats taste sugar?\nY or N?");
 answer5.toLowerCase();
 console.log("user answer5 is: " + answer5);
-if (answer5 === "y" || "yes") {
+if (answer5 === "y" || answer5 === "yes") {
   alert("Correct!")
-} else if (answer5 === "n" || "no") {
+} else if (answer5 === "n" || answer5 === "no") {
   alert("Wrong.")
 } else {
   alert("You didn't type in Y or N.")
