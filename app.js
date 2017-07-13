@@ -72,10 +72,6 @@ if (answer5 === "n" || answer5 === "no") {
   alert("You didn't type in Y or N.")
 };
 
-document.getElementById('guest_name').innerHTML = guestName;
-document.getElementById('h1_guest_name').innerHTML = guestName;
-console.log("User types in name: " + guestName);
-
 //question 6
 var count = 1;
 var setNumber = Math.floor(Math.random()*100);
@@ -87,13 +83,13 @@ do {
     count = count + 1;
     correctTimes ++;
     break;
-  } else if(guessNumber > setNumber && count != 4) {
+  } else if(guessNumber > setNumber && count !== 4) {
     guessNumber = prompt("Ah, I see you are confident, but probably you might want to consider being a bit humble. \nYou have " + (4-count) + " " + timeOrTimes[3-count] + " left. Guess again!");
     count ++;
-  } else if(guessNumber < setNumber && count != 4) {
+  } else if(guessNumber < setNumber && count !== 4) {
     guessNumber = prompt("Give your self more karma point! \nYou have " + (4-count) + " " + timeOrTimes[3-count] + " left. Guess again!")
     count ++;
-  } else if(count === 4 && guessNumber != setNumber) {
+  } else if(count === 4 && guessNumber !== setNumber) {
     alert("Uh oh, you ran out of chances! You karma value is: " + setNumber + ". Not that it matters.");
     break;
   } else {
@@ -108,18 +104,21 @@ var count2 = 1;
 var brewery = ["hilliard", "fremont", "lucky envelope", "reuben's", "", "outlander", "naked city"];
 var answer7 = prompt("Let's talk about beers. What brewery in Seattle do I like?\nfinally something about ME.").toLowerCase();
 do {
-  if(brewery.includes(answer7) && answer7 != "") {
-    alert("Great minds think alike. You can buy us 2 beers and celebrate! \nFor breweries in Seattle area, I like these guys: Hilliard, Lucky Envelope, Naked City.");
+  if(brewery.includes(answer7) && answer7 !== "") {
+    alert("Great minds think alike. You can buy us 2 beers and celebrate!");
     correctTimes ++;
-    break;
-  } else if(count2 === 6) {
+    count2 ++;
+    answer7 = prompt("Let's talk about beers. What brewery in Seattle do I like?\nfinally something about ME. \nYou have " + (6-count2) + " " + timeOrTimes[5-count2] + " left.").toLowerCase();
+  } else {
+      answer7 = prompt("Hmm....not really. Hint: I don't like high IBUs. \nYou have " + (6-count2) + " " + timeOrTimes[5-count2] + " left. Guess again!" );
+      count2 ++;
+    }
+
+    if(count2 === 6) {
     alert("Uh oh, looks like no beers for us...\nFor breweries in Seattle area, I like these guys: Hilliard, Lucky Envelope, Naked City.");
     break;
-  } else {
-    answer7 = prompt("Hmm....not really. Hint: I don't like high IBUs. \nYou have " + (6-count2) + " " + timeOrTimes[5-count2] + " left. Guess again!" );
-    count2 ++;
+    }
   }
-}
 while(count2 < 7);
 
-alert("Hey, " + guestName + " you get " + correctTimes + " out of 7 right. Yay.")
+alert("Hey, " + guestName + " you get " + correctTimes + " out of 12 right. Yay.")
