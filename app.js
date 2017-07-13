@@ -2,17 +2,12 @@
 // prompt for username
 var guestName = prompt("Hey, what's your name? Let's play a game!");
 var correctTimes = 0;
-// var i;
-// var allQuestions = ["Can pigs look at the sky?", "Can horses sleep while standing up?", "Do baby elephants suck their trunk?", "Do baby elephants suck their trunk?", "Do prairie dogs kiss?", "Finally, can cats taste sugar?", "Hey now, tell me what you think your karma value is in numbers, out of 100.", "Let's talk about beers. What brewery in Seattle do I like?\nfinally something about ME."];
 
-// var answer1, answer2, answer3, answer4, answer5, answer7, guessNumber;
-// answer1 = prompt(allQuestions[0]).toLowerCase();
-// answer2 = prompt(allQuestions[1]).toLowerCase();
-// answer3 = prompt(allQuestions[2]).toLowerCase();
-// answer4 = prompt(allQuestions[3]).toLowerCase();
-// answer5 = prompt(allQuestions[4]).toLowerCase();
-// guessNumber = prompt(allQuestions[5]).toLowerCase();
-// answer7 = prompt(allQuestions[6]).toLowerCase();
+//***using ARRAY to store questions and answers:
+//var array1 to include 1-5 questions, excluding 6 and 7, bcuz it needs more code to put them in an array(?)
+//e.g. [[question1, {y: "alert msg for answer Y, n:"alert msg for answer N"}], [question2, {}], etc
+//var answer to take user input. answer needs to be clear in each loop. Msg being prompt can be accessed by hash's key-value pair.
+
 document.getElementById('guest_name').innerHTML = guestName;
 document.getElementById('h1_guest_name').innerHTML = guestName;
 console.log("User types in name: " + guestName);
