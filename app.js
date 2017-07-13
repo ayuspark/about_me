@@ -80,7 +80,7 @@ console.log("User types in name: " + guestName);
 var count = 1;
 var setNumber = Math.floor(Math.random()*100);
 var timeOrTimes = ["time", "times", "times", "times", "times"] //stupid way to determine: to use 'times' or 'time' based on count
-var guessNumber = prompt("Hey now, tell me what you think your karma value is in numbers, out of 100.");
+var guessNumber = parseInt(prompt("Hey now, tell me what you think your karma value is in numbers, out of 100."));
 do {
   if(guessNumber === setNumber) {
     alert("You know your karma! \nThe most difficult thing is to know yourself. -- Thales.")
