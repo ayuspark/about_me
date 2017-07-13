@@ -1,7 +1,7 @@
-/** {
+* {
   box-sizing: : border-box;
   border: 1px dashed red;
-}*/
+}
 
 /*intro part of About Me*/
 #intro {
@@ -141,18 +141,21 @@ article p{
 ul {
   list-style-type: none;
   background-color: #DCDCDC;
-  padding-right: 13px;
+  padding-right: 0;
+  padding-left: 0px;
 }
 
 ul li {
   display: block;
   list-style: none;
+  padding-right: 10px;
 }
 
 li a {
   text-decoration: none;
   color: white;
   font-weight: normal;
+  display: block;
 }
 
 ul li:hover {
