@@ -1,6 +1,6 @@
 /** {
   box-sizing: : border-box;
-  border: 1px solid red;
+  border: 1px dashed red;
 }*/
 
 /*intro part of About Me*/
@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   width: auto;
-  height: 450px;
+  height: 470px;
   text-align: center;
 }
 
@@ -50,12 +50,12 @@
   margin: 3px 0;
 }
 
-/*listes guess game questions and answers*/
+/*list of guess game questions and answers*/
 .questions {
   float: left;
   width: 19%;
   height: 78px;
-  margin: 0 5px;
+  margin: 15px 5px;
   background-color: DarkGrey;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -65,10 +65,6 @@
 }
 
 article {
-  font-family: "Roboto", sans-serif;
-  font-weight: lighter;
-  font-size: 20px;
-  text-align: left;
   /*margin-top: 200px;*/
   /*Why is there not a big margin between article and questions?*/
   clear: both;
@@ -86,8 +82,80 @@ article h2 {
 }
 
 article p{
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  text-align: left;
   background-color: grey;
   color: white;
   padding: 5px 15px;
   margin-top: 0px;
+}
+
+/*list of beers*/
+.list{
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    font-size: 24px;
+    color: grey;
+    text-align: left center;
+    float: right;
+    width: 48%;
+    height: 200px;
+    margin: 3px 0;
+}
+
+.list h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  font-size: 48px;
+  text-align: left;
+  color: Black;
+  margin-bottom: 0;
+  border-bottom: 3px solid black;
+}
+
+/*list of films and shows*/
+.unordered_list {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  font-size: 38px;
+  color: grey;
+  text-align: right;
+  float: left;
+  height: 200px;
+  width: 50%;
+  margin: 3px 0;
+}
+
+.unordered_list h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  font-size: 48px;
+  text-align: right;
+  color: Black;
+  margin-bottom: 0;
+  border-bottom: 3px solid black;
+}
+
+ul {
+  list-style-type: none;
+  background-color: #DCDCDC;
+  padding-right: 13px;
+}
+
+ul li {
+  display: block;
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-weight: normal;
+}
+
+ul li:hover {
+    background-color: #555;
+    color: white;
 }
