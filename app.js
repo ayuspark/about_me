@@ -72,53 +72,60 @@ if (answer5 === "n" || answer5 === "no") {
   alert("You didn't type in Y or N.")
 };
 
-//question 6
-var count = 1;
-var setNumber = Math.floor(Math.random()*100);
 var timeOrTimes = ["time", "times", "times", "times", "times"] //stupid way to determine: to use 'times' or 'time' based on count
-var guessNumber = parseInt(prompt("Hey now, tell me what you think your karma value is in numbers, out of 100."));
-do {
-  if(guessNumber === setNumber) {
-    alert("You know your karma! \nThe most difficult thing is to know yourself. -- Thales.")
-    count = count + 1;
-    correctTimes ++;
-    break;
-  } else if(guessNumber > setNumber && count !== 4) {
-    guessNumber = prompt("Ah, I see you are confident, but probably you might want to consider being a bit humble. \nYou have " + (4-count) + " " + timeOrTimes[3-count] + " left. Guess again!");
-    count ++;
-  } else if(guessNumber < setNumber && count !== 4) {
-    guessNumber = prompt("Give your self more karma point! \nYou have " + (4-count) + " " + timeOrTimes[3-count] + " left. Guess again!")
-    count ++;
-  } else if(count === 4 && guessNumber !== setNumber) {
-    alert("Uh oh, you ran out of chances! You karma value is: " + setNumber + ". Not that it matters.");
-    break;
-  } else {
-    alert("You typed something else, apparently you don't take it seriously. Angry face. And plus you now break my JS loop.");
-    break;
+
+//question 6
+var question6 = function() {
+  var count = 1;
+  var setNumber = Math.floor(Math.random()*100);
+  var guessNumber = parseInt(prompt("Hey now, tell me what you think your karma value is in numbers, out of 100."));
+  do {
+    if(guessNumber === setNumber) {
+      alert("You know your karma! \nThe most difficult thing is to know yourself. -- Thales.")
+      count = count + 1;
+      correctTimes ++;
+      break;
+    } else if(guessNumber > setNumber && count !== 4) {
+      guessNumber = prompt("Ah, I see you are confident, but probably you might want to consider being a bit humble. \nYou have " + (4-count) + " " + timeOrTimes[3-count] + " left. Guess again!");
+      count ++;
+    } else if(guessNumber < setNumber && count !== 4) {
+      guessNumber = prompt("Give your self more karma point! \nYou have " + (4-count) + " " + timeOrTimes[3-count] + " left. Guess again!")
+      count ++;
+    } else if(count === 4 && guessNumber !== setNumber) {
+      alert("Uh oh, you ran out of chances! You karma value is: " + setNumber + ". Not that it matters.");
+      break;
+    } else {
+      alert("You typed something else, apparently you don't take it seriously. Angry face. And plus you now break my JS loop.");
+      break;
+    }
   }
-}
-while(count <= 4);
+  while(count <= 4);
+} // question6 function END
+question6();
 
 //question 7
-var count2 = 1;
-var brewery = ["hilliard", "fremont", "lucky envelope", "reuben's", "", "outlander", "naked city"];
-var answer7 = prompt("Let's talk about beers. What brewery in Seattle do I like?\nfinally something about ME.").toLowerCase();
-do {
-  if(brewery.includes(answer7) && answer7 !== "") {
-    alert("Great minds think alike. You can buy us 2 beers and celebrate!");
-    correctTimes ++;
-    count2 ++;
-    answer7 = prompt("Let's talk about beers. What brewery in Seattle do I like?\nfinally something about ME. \nYou have " + (6-count2) + " " + timeOrTimes[5-count2] + " left.").toLowerCase();
-  } else {
-      answer7 = prompt("Hmm....not really. Hint: I don't like high IBUs. \nYou have " + (6-count2) + " " + timeOrTimes[5-count2] + " left. Guess again!" );
+var question7 = function() {
+  var count2 = 1;
+  var brewery = ["hilliard", "fremont", "lucky envelope", "reuben's", "", "outlander", "naked city"];
+  var answer7 = prompt("Let's talk about beers. What brewery in Seattle do I like?\nfinally something about ME.").toLowerCase();
+  do {
+    if(brewery.includes(answer7) && answer7 !== "") {
+      alert("Great minds think alike. You can buy us 2 beers and celebrate!");
+      correctTimes ++;
       count2 ++;
-    }
+      answer7 = prompt("Let's talk about beers. What brewery in Seattle do I like?\nfinally something about ME. \nYou have " + (6-count2) + " " + timeOrTimes[5-count2] + " left.").toLowerCase();
+    } else {
+        answer7 = prompt("Hmm....not really. Hint: I don't like high IBUs. \nYou have " + (6-count2) + " " + timeOrTimes[5-count2] + " left. Guess again!" );
+        count2 ++;
+      }
 
-    if(count2 === 6) {
-    alert("Uh oh, looks like no beers for us...\nFor breweries in Seattle area, I like these guys: Hilliard, Lucky Envelope, Naked City.");
-    break;
+      if(count2 === 6) {
+      alert("Uh oh, looks like no beers for us...\nFor breweries in Seattle area, I like these guys: Hilliard, Lucky Envelope, Naked City.");
+      break;
+      }
     }
-  }
-while(count2 < 7);
+  while(count2 < 7);
+} // question7 function END
+question7();
 
 alert("Hey, " + guestName + " you get " + correctTimes + " out of 12 right. Yay.")
