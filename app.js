@@ -12,16 +12,21 @@ var answer;
 // question 1-5
 var yesOrNoQuestions = function() {
   var q1 = "Can pigs look at the sky?",
+      a1 = {"y":["Wrong. They cannot fly either.", 0], "n":["Correct! Their muscle doesn't allow that. Sad face.", 1]},
       q2 = "Can horses sleep while standing up?",
+      a2 = {"y":["Correct! Horses are so cool...", 1], "n":["Wrong. Can you imagine when they cuddle?", 0]},
       q3 = "Do baby elephants suck their trunk?",
+      a3 = {"y":["Correct! They are just like babies.", 1], "n":["Wrong. There haven't yet been a pacifier for elephants.", 0]},
       q4 = "Do prairie dogs kiss?",
-      q5 = "Finally, can cats taste sugar?";
+      a4 = {"y":["Correct! They speak French too.", 1], "n":["Wrong. You are just jealous.", 0]},
+      q5 = "Finally, can cats taste sugar?",
+      a5 = {"y":["Wrong. They never smile, can't you see.", 0], "n":["Correct! They are flawed, god forbid!", 1]};
 
-  var gameArray = [[q1, {"y":["Wrong. They cannot fly either.", 0], "n":["Correct! Their muscle doesn't allow that. Sad face.", 1]}],
-                  [q2, {"y":["Correct! Horses are so cool...", 1], "n":["Wrong. Can you imagine when they cuddle?", 0]}],
-                  [q3, {"y":["Correct! They are just like babies.", 1], "n":["Wrong. There haven't yet been a pacifier for elephants.", 0]}],
-                  [q4, {"y":["Correct! They speak French too.", 1], "n":["Wrong. You are just jealous.", 0]}],
-                  [q5, {"y":["Wrong. They never smile, can't you see.", 0], "n":["Correct! They are flawed, god forbid!", 1]}]];
+  var gameArray = [[q1, a1],
+                  [q2, a2],
+                  [q3, a3],
+                  [q4, a4],
+                  [q5, a5]];
 
   for (var i = 0; i < 5; i++) {
     answer = prompt(gameArray[i][0]).toLowerCase();
